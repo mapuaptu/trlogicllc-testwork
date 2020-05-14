@@ -1,12 +1,20 @@
 <template>
   <div :class="$style.home">
-    <Button
-      icon="plus-outline"
-      :class="$style.button"
-      @click.native="addNote"
-    >
-      Add todo
-    </Button>
+    <div :class="$style.controls">
+      <Button
+        icon="plus-outline"
+        @click.native="addNote"
+      >
+        Add todo
+      </Button>
+
+      <Button
+        icon="delete-outline"
+        @click.native="deleteAllNotes"
+      >
+        Delete all
+      </Button>
+    </div>
 
     <div>
       <div

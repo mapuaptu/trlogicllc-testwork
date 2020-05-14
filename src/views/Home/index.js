@@ -18,5 +18,8 @@ export default {
         { height: 'auto' },
       );
     },
+    deleteAllNotes() {
+      return this.$store.commit('DELETE_ALL_NOTES');
+    },
   },
 };

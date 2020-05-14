@@ -5,6 +5,7 @@ import createPersistedState from 'vuex-persistedstate';
 Vue.use(Vuex);
 
 const CREATE_NOTE = 'CREATE_NOTE';
+const DELETE_ALL_NOTES = 'DELETE_ALL_NOTES';
 
 export default new Vuex.Store({
   plugins: [createPersistedState()],
@@ -14,6 +15,9 @@ export default new Vuex.Store({
   mutations: {
     [CREATE_NOTE](state, payload) {
       state.notes.push(payload);
+    },
+    [DELETE_ALL_NOTES](state) {
+      state.notes = [];
     },
   },
   actions: {},
