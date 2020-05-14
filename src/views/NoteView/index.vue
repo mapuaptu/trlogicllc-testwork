@@ -1,11 +1,33 @@
 <template>
   <div :class="$style.note">
-    <div :class="$style.title">
-      <div :class="$style.text">
+    <div
+      v-click-outside="hideEditMode"
+      :class="$style.title"
+    >
+      <div
+        v-if="!editMode"
+        :class="$style.text"
+      >
         {{ note.name }}
       </div>
 
+      <input
+        v-else
+        ref="input"
+        :value="note.name"
+        type="text"
+        :class="$style.input"
+        @input="onNameInput"
+      >
+
       <div :class="$style.controls">
+        <Button
+          icon="pencil-outline"
+          @click.native="editName"
+        >
+          {{ editMode ? 'Save name': 'Edit name' }}
+        </Button>
+
         <Button
           icon="delete-outline"
           @click.native="deleteNote(note)"

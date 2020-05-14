@@ -11,10 +11,30 @@
     border-bottom: 1px solid $color-java;
     padding: 10px 20px;
 
+    .controls {
+      display: flex;
+      align-items: center;
+
+      > div:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
     .text {
+      max-width: 40%;
+      font-size: 25px;
+      line-height: 25px;
+      word-break: break-all;
+      color: $color-java;
+    }
+
+    .input {
+      border: none;
+      max-width: 40%;
       font-size: 25px;
       line-height: 25px;
       color: $color-java;
+      background-color: transparent;
     }
   }
 
