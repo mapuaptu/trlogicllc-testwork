@@ -1,6 +1,6 @@
 <template>
-  <div :class="$style.todo">
-    TODO
+  <div :class="$style.note">
+    NOTE PAGE
   </div>
 </template>
 

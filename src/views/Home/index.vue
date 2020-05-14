@@ -9,12 +9,14 @@
         Add note
       </Button>
 
-      <Button
+      <!-- TEST BUTTON FOR DELETE ALL NOTES -->
+
+      <!-- <Button
         icon="delete-outline"
         @click.native="deleteAllNotes"
       >
         Delete all notes
-      </Button>
+      </Button> -->
     </div>
 
     <div :class="$style.content">
@@ -23,6 +25,7 @@
         :key="item.id"
         :title="item.name"
         @delete="deleteNote(item)"
+        @edit="editNote(item)"
       >
         todo item will be here
       </Note>

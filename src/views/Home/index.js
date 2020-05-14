@@ -27,5 +27,8 @@ export default {
         { height: 'auto' },
       );
     },
+    editNote({ id }) {
+      return this.$router.push({ name: 'note', params: { id } });
+    },
   },
 };

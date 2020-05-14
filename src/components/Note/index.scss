@@ -2,8 +2,10 @@
 
 .note {
   position: relative;
+  left: 0;
   border: 1px solid $color-java;
   border-radius: 5px;
+  transition: $transition;
 
   .title {
     display: flex;
@@ -13,6 +15,7 @@
     padding: 10px 20px;
     font-weight: 700;
     font-size: 20px;
+    color: $color-white;
     background-color: $color-java;
 
     .icon {
@@ -25,7 +28,24 @@
     }
   }
 
+  .controls {
+    display: flex;
+
+    > div:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
   .content {
     padding: 10px 20px;
+    color: $color-white;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &:hover {
+    left: 5px;
   }
 }

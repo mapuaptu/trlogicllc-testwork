@@ -1,20 +1,20 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home/index.vue';
-import Todo from '../views/Todo/index.vue';
+import NoteView from '../views/NoteView/index.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home,
   },
   {
-    path: '/todo/:id',
-    name: 'Todo',
-    component: Todo,
+    path: '/note/:id',
+    name: 'note',
+    component: NoteView,
   },
 ];
 
