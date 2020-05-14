@@ -32,3 +32,58 @@ body {
   text-align: center;
   color: $color-java;
 }
+
+.vm--modal {
+  box-shadow: none !important;
+  background-color: $color-charade !important;
+
+  > div {
+    height: 100%;
+  }
+}
+
+.modal {
+  color: $color-java;
+
+  .modal-header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $color-java;
+    padding: 15px 20px;
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .modal-content {
+    display: flex;
+    flex-flow: column;
+    padding: 15px 20px;
+
+    .input {
+      border: 1px solid $color-java;
+      border-radius: 5px;
+      padding: 5px 10px;
+      min-height: 36px;
+      color: $color-java;
+      background-color: transparent;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 14px;
+      color: $color-red-orange;
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $color-java;
+    padding: 15px 20px;
+
+    > div:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}

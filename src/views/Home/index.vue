@@ -3,9 +3,19 @@
     <Button
       icon="plus-outline"
       :class="$style.button"
+      @click.native="addNote"
     >
       Add todo
     </Button>
+
+    <div>
+      <div
+        v-for="(item, index) in notes"
+        :key="index"
+      >
+        {{ item.name }}
+      </div>
+    </div>
   </div>
 </template>
 
