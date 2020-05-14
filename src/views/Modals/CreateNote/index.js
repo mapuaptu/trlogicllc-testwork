@@ -35,4 +35,7 @@ export default {
       return this.$emit('close');
     },
   },
+  mounted() {
+    return this.$refs.input.focus();
+  },
 };

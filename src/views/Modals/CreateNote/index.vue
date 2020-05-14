@@ -9,6 +9,7 @@
 
     <div class="modal-content">
       <input
+        ref="input"
         v-model="noteName"
         type="text"
         placeholder="Enter note name"
