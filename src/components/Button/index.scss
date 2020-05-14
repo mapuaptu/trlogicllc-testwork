@@ -1,0 +1,21 @@
+@import '@/styles/_variables.scss';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid $color-java;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 700;
+  color: $color-java;
+  transition: $transition;
+  cursor: pointer;
+
+  .icon {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

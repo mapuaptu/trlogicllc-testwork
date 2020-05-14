@@ -11,7 +11,24 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
-  color: $color-black;
-  background-color: $color-white;
+  line-height: 16px;
+  color: $color-white;
+  background-color: $color-charade;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 40px;
+  width: 50vw;
+  height: 100vh;
+}
+
+.headline {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: $color-java;
 }

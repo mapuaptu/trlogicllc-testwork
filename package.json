@@ -17,6 +17,7 @@
     }
   },
   "dependencies": {
+    "@mdi/js": "5.2.45",
     "core-js": "^3.6.4",
     "normalize.css": "8.0.1",
     "vue": "^2.6.11",

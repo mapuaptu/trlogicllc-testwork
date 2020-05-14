@@ -1,6 +1,11 @@
 <template>
   <div :class="$style.home">
-    HOME
+    <Button
+      icon="plus-outline"
+      :class="$style.button"
+    >
+      Add todo
+    </Button>
   </div>
 </template>
 
