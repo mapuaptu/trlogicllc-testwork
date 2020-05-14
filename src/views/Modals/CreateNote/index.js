@@ -5,12 +5,6 @@ export default {
   components: {
     Button,
   },
-  props: {
-    title: {
-      type: String,
-      default: '',
-    },
-  },
   data() {
     return {
       message: '',

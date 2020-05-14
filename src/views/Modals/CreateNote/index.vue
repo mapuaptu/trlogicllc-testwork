@@ -4,7 +4,7 @@
     class="modal"
   >
     <div class="modal-header">
-      {{ title }}
+      Create Note
     </div>
 
     <div class="modal-content">

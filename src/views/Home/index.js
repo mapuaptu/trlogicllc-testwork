@@ -12,11 +12,7 @@ export default {
   },
   methods: {
     addNote() {
-      return this.$modal.show(
-        ModalCreateNode,
-        { title: 'Create note' },
-        { height: 'auto' },
-      );
+      return this.$modal.show(ModalCreateNode, {}, { height: 'auto' });
     },
     deleteAllNotes() {
       return this.$store.commit('DELETE_ALL_NOTES');
