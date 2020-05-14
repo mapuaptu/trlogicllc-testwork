@@ -38,7 +38,23 @@
     </div>
 
     <div :class="$style.content">
-      content
+      <Button
+        :fill="true"
+        icon="plus-outline"
+        :class="$style.button"
+        @click.native="createTodo"
+      >
+        Add todo
+      </Button>
+
+      <div :class="$style.todos">
+        <div
+          v-for="(item, index) in note.todos"
+          :key="index"
+        >
+          {{ item }}
+        </div>
+      </div>
     </div>
 
     <div :class="$style.footer">

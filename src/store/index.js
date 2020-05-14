@@ -17,7 +17,7 @@ export default new Vuex.Store({
   },
   mutations: {
     [CREATE_NOTE](state, payload) {
-      state.notes.push({ id: state.noteId, ...payload });
+      state.notes.push({ id: state.noteId, todos: [], ...payload });
       state.noteId += 1;
     },
     [DELETE_ALL_NOTES](state) {

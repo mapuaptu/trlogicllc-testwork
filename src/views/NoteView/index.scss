@@ -38,9 +38,21 @@
     }
   }
 
+  .content {
+    display: flex;
+    flex-flow: column;
+    padding: 10px 20px;
+    min-height: 100px;
+
+    .button {
+      align-self: flex-end;
+    }
+  }
+
   .footer {
     display: flex;
     justify-content: flex-end;
+    border-top: 1px solid $color-java;
     padding: 10px 20px;
 
     > div:not(:last-child) {

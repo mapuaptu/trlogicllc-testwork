@@ -2,6 +2,7 @@ import Button from '@/components/Button/index.vue';
 import Icon from '@/components/Icon/index.vue';
 import deleteNote from '@/mixins/deleteNote';
 import ModalCancelEdit from '@/views/Modals/CancelEdit/index.vue';
+import ModalCreateTodo from '@/views/Modals/CreateTodo/index.vue';
 import ClickOutside from 'vue-click-outside';
 
 export default {
@@ -18,6 +19,7 @@ export default {
     return {
       note: {
         name: '',
+        todos: [],
       },
       editMode: false,
     };
@@ -49,6 +51,28 @@ export default {
       this.$store.commit('EDIT_NOTE', this.note);
 
       return this.$router.push({ name: 'home' });
+    },
+    createTodo() {
+      return this.$modal.show(
+        ModalCreateTodo,
+        {
+          // react style becase such modal component
+          // issue on github - https://github.com/euvl/vue-js-modal/issues/192#issuecomment-372990690
+          onTodoSave: this.onTodoSave,
+        },
+        { height: 'auto' },
+      );
+    },
+    onTodoSave(name) {
+      if (this.note.todos.find((item) => item.name === name)) {
+        return {
+          error: { message: 'Todo with same name already exist' },
+        };
+      }
+
+      this.note.todos.push({ name, complete: false });
+
+      return { error: null };
     },
   },
   created() {

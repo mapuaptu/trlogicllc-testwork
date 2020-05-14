@@ -4,7 +4,7 @@
 
     <div class="container">
       <div class="headline">
-        Todo builder
+        Note builder
       </div>
       <router-view />
     </div>
