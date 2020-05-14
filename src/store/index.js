@@ -7,6 +7,7 @@ Vue.use(Vuex);
 const CREATE_NOTE = 'CREATE_NOTE';
 const DELETE_ALL_NOTES = 'DELETE_ALL_NOTES';
 const DELETE_NOTE = 'DELETE_NOTE';
+const EDIT_NOTE = 'EDIT_NOTE';
 
 export default new Vuex.Store({
   plugins: [createPersistedState()],
@@ -24,6 +25,11 @@ export default new Vuex.Store({
     },
     [DELETE_NOTE](state, { id }) {
       state.notes = state.notes.filter((item) => item.id !== id);
+    },
+    [EDIT_NOTE](state, payload) {
+      const index = state.notes.findIndex((item) => item.id === payload.id);
+
+      state.notes[index] = payload;
     },
   },
   actions: {},

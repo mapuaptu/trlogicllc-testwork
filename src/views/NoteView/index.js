@@ -46,14 +46,18 @@ export default {
       return this.$modal.show(ModalCancelEdit, {}, { height: 'auto' });
     },
     onSave() {
-      // Save all data to store here
+      this.$store.commit('EDIT_NOTE', this.note);
 
       return this.$router.push({ name: 'home' });
     },
   },
   created() {
-    return (this.note = this.$store.state.notes.find(
+    // Create new instance of note for not mutate store directly
+
+    const note = this.$store.state.notes.find(
       (item) => item.id === Number(this.$route.params.id),
-    ));
+    );
+
+    return (this.note = { ...note });
   },
 };
