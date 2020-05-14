@@ -5,24 +5,26 @@
         icon="plus-outline"
         @click.native="addNote"
       >
-        Add todo
+        Add note
       </Button>
 
       <Button
         icon="delete-outline"
         @click.native="deleteAllNotes"
       >
-        Delete all
+        Delete all notes
       </Button>
     </div>
 
-    <div>
-      <div
-        v-for="(item, index) in notes"
-        :key="index"
+    <div :class="$style.content">
+      <Note
+        v-for="item in notes"
+        :key="item.id"
+        :title="item.name"
+        @delete="deleteNote(item.id)"
       >
-        {{ item.name }}
-      </div>
+        todo item will be here
+      </Note>
     </div>
   </div>
 </template>

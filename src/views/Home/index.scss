@@ -8,9 +8,16 @@
   .controls {
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 
     > div:not(:last-child) {
       margin-right: 15px;
+    }
+  }
+
+  .content {
+    > div:not(:last-child) {
+      margin-bottom: 25px;
     }
   }
 }
