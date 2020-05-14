@@ -1,6 +1,7 @@
 <template>
   <div :class="$style.icon">
     <svg
+      v-if="icon"
       :width="width"
       :height="height"
       :viewbox="`0 0 ${width} ${height}`"

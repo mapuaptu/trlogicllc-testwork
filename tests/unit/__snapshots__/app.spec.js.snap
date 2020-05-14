@@ -2,6 +2,12 @@
 
 exports[`App component 1. Rendered success 1`] = `
 <div id="app">
-  <router-view-stub></router-view-stub>
+  <modals-container-stub></modals-container-stub>
+  <div class="container">
+    <div class="headline">
+      Todo builder
+    </div>
+    <router-view-stub></router-view-stub>
+  </div>
 </div>
 `;
