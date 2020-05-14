@@ -10,11 +10,13 @@ const DELETE_ALL_NOTES = 'DELETE_ALL_NOTES';
 export default new Vuex.Store({
   plugins: [createPersistedState()],
   state: {
+    noteId: 0,
     notes: [],
   },
   mutations: {
     [CREATE_NOTE](state, payload) {
-      state.notes.push(payload);
+      state.notes.push({ id: state.noteId, ...payload });
+      state.noteId += 1;
     },
     [DELETE_ALL_NOTES](state) {
       state.notes = [];
