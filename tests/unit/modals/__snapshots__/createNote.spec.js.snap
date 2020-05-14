@@ -9,12 +9,12 @@ exports[`Modal createNote component 1. Rendered success 1`] = `
     <!---->
   </div>
   <div class="modal-footer">
-    <div><span>
+    <div class=""><span>
       Cancel
     </span>
       <!---->
     </div>
-    <div><span>
+    <div class=""><span>
       Save
     </span>
       <!---->

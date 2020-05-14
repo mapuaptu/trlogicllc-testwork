@@ -29,7 +29,10 @@
         Cancel
       </Button>
 
-      <Button @click.native="onSave">
+      <Button
+        :fill="true"
+        @click.native="onSave"
+      >
         Save
       </Button>
     </div>

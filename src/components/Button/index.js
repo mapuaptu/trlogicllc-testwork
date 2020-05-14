@@ -10,5 +10,9 @@ export default {
       type: String,
       default: '',
     },
+    fill: {
+      type: Boolean,
+      default: false,
+    },
   },
 };

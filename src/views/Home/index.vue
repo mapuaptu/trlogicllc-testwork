@@ -3,6 +3,7 @@
     <div :class="$style.controls">
       <Button
         icon="plus-outline"
+        :fill="true"
         @click.native="addNote"
       >
         Add note

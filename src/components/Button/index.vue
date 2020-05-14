@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.button">
+  <div :class="[$style.button, fill && $style['button--fill']]">
     <span>
       <slot />
     </span>
@@ -7,7 +7,7 @@
     <Icon
       v-if="icon"
       :icon="icon"
-      fill="#14b6bd"
+      :fill="fill ? '#fff': '#14b6bd'"
       :class="$style.icon"
     />
   </div>
