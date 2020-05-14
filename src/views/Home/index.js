@@ -16,7 +16,22 @@ export default {
   },
   methods: {
     addNote() {
-      return this.$modal.show(ModalCreateNote, {}, { height: 'auto' });
+      return this.$modal.show(
+        ModalCreateNote,
+        { onNoteSave: this.onNoteSave },
+        { height: 'auto' },
+      );
+    },
+    onNoteSave(name) {
+      if (this.$store.state.notes.find((item) => item.name === name)) {
+        return { error: { message: 'Note with this name already exist' } };
+      }
+
+      this.$store.commit('CREATE_NOTE', { name });
+
+      return {
+        error: null,
+      };
     },
     deleteAllNotes() {
       return this.$store.commit('DELETE_ALL_NOTES');

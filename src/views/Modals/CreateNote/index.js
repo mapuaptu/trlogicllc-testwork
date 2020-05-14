@@ -2,6 +2,12 @@ import Button from '@/components/Button/index.vue';
 
 export default {
   name: 'ModalCreateNote',
+  props: {
+    onNoteSave: {
+      type: Function,
+      default: () => {},
+    },
+  },
   components: {
     Button,
   },
@@ -20,11 +26,11 @@ export default {
         return (this.message = 'Note name requred');
       }
 
-      if (this.$store.state.notes.find((item) => item.name === this.noteName)) {
-        return (this.message = 'Note with this name already exist');
-      }
+      const { error } = this.onNoteSave(this.noteName);
 
-      this.$store.commit('CREATE_NOTE', { name: this.noteName });
+      if (error) {
+        return (this.message = error.message);
+      }
 
       return this.$emit('close');
     },
