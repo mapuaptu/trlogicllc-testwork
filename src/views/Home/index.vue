@@ -27,12 +27,18 @@
         @delete="deleteNote(item)"
         @edit="editNote(item)"
       >
-        <div
-          v-for="todo in item.todos"
-          :key="todo.id"
-        >
-          {{ todo }}
-        </div>
+        <template v-if="item.todos.length">
+          <div
+            v-for="todo in item.todos"
+            :key="todo.id"
+          >
+            {{ todo }}
+          </div>
+        </template>
+
+        <template v-else>
+          no todos yet
+        </template>
       </Note>
     </div>
   </div>

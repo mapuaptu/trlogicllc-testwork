@@ -17,10 +17,9 @@ export default {
   },
   data() {
     return {
-      note: {
-        name: '',
-        todos: [],
-      },
+      id: '',
+      name: '',
+      todos: [],
       editMode: false,
     };
   },
@@ -42,13 +41,17 @@ export default {
         return;
       }
 
-      return (this.note.name = event.target.value);
+      return (this.name = event.target.value);
     },
     onCancel() {
       return this.$modal.show(ModalCancelEdit, {}, { height: 'auto' });
     },
     onSave() {
-      this.$store.commit('EDIT_NOTE', this.note);
+      this.$store.commit('EDIT_NOTE', {
+        name: this.name,
+        todos: this.todos,
+        id: this.id,
+      });
 
       return this.$router.push({ name: 'home' });
     },
@@ -64,7 +67,7 @@ export default {
       );
     },
     onTodoSave(name) {
-      if (this.note.todos.find((item) => item.name === name)) {
+      if (this.todos.find((item) => item.name === name)) {
         return {
           error: { message: 'Todo with same name already exist' },
         };
@@ -72,7 +75,7 @@ export default {
 
       // may be use uuid is better
 
-      this.note.todos.push({ name, complete: false, id: Date.now() });
+      this.todos.push({ name, complete: false, id: Date.now() });
 
       return { error: null };
     },
@@ -84,6 +87,8 @@ export default {
       (item) => item.id === Number(this.$route.params.id),
     );
 
-    return (this.note = { ...note });
+    this.name = note.name;
+    this.id = note.id;
+    this.todos = [...note.todos];
   },
 };

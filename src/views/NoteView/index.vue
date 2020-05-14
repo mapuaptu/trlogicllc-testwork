@@ -8,13 +8,13 @@
         v-if="!editMode"
         :class="$style.text"
       >
-        {{ note.name }}
+        {{ name }}
       </div>
 
       <input
         v-else
         ref="input"
-        :value="note.name"
+        :value="name"
         type="text"
         :class="$style.input"
         @input="onNameInput"
@@ -30,7 +30,7 @@
 
         <Button
           icon="delete-outline"
-          @click.native="deleteNote(note)"
+          @click.native="deleteNote({id, name})"
         >
           Delete note
         </Button>
@@ -49,7 +49,7 @@
 
       <div :class="$style.todos">
         <div
-          v-for="item in note.todos"
+          v-for="item in todos"
           :key="item.id"
         >
           {{ item }}
