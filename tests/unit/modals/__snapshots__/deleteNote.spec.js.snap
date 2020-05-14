@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal createNote component 1. Rendered success 1`] = `
+<div class="modal">
+  <div class="modal-header">
+    Delete Note
+  </div>
+  <div class="modal-content">
+    Are you sure you want to delete note
+  </div>
+  <div class="modal-footer">
+    <div class=""><span>
+      Cancel
+    </span>
+      <!---->
+    </div>
+    <div class=""><span>
+      Delete
+    </span>
+      <!---->
+    </div>
+  </div>
+</div>
+`;
