@@ -34,6 +34,7 @@ body {
 }
 
 .vm--modal {
+  border: 1px solid $color-java;
   box-shadow: none !important;
   background-color: $color-charade !important;
 
@@ -49,22 +50,26 @@ body {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid $color-java;
-    padding: 15px 20px;
-    font-size: 35px;
-    line-height: 35px;
+    padding: 10px 20px;
+    font-size: 25px;
+    line-height: 25px;
+    color: $color-white;
+    background-color: $color-java;
   }
 
   .modal-content {
     display: flex;
     flex-flow: column;
     padding: 15px 20px;
+    text-align: center;
+    color: $color-white;
 
     .input {
       border: 1px solid $color-java;
       border-radius: 5px;
       padding: 5px 10px;
       min-height: 36px;
-      color: $color-java;
+      color: $color-white;
       background-color: transparent;
     }
 

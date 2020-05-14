@@ -1,6 +1,7 @@
 import Button from '@/components/Button/index.vue';
 import Note from '@/components/Note/index.vue';
-import ModalCreateNode from '@/views/Modals/CreateNote/index.vue';
+import ModalCreateNote from '@/views/Modals/CreateNote/index.vue';
+import ModalDeleteNote from '@/views/Modals/DeleteNote/index.vue';
 import { mapState } from 'vuex';
 
 export default {
@@ -14,13 +15,17 @@ export default {
   },
   methods: {
     addNote() {
-      return this.$modal.show(ModalCreateNode, {}, { height: 'auto' });
+      return this.$modal.show(ModalCreateNote, {}, { height: 'auto' });
     },
     deleteAllNotes() {
       return this.$store.commit('DELETE_ALL_NOTES');
     },
-    deleteNote(id) {
-      return this.$store.commit('DELETE_NOTE', { id });
+    deleteNote({ id, name }) {
+      return this.$modal.show(
+        ModalDeleteNote,
+        { id, name },
+        { height: 'auto' },
+      );
     },
   },
 };

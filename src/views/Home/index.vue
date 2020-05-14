@@ -22,7 +22,7 @@
         v-for="item in notes"
         :key="item.id"
         :title="item.name"
-        @delete="deleteNote(item.id)"
+        @delete="deleteNote(item)"
       >
         todo item will be here
       </Note>
