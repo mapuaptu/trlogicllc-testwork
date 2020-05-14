@@ -1,4 +1,4 @@
-import Home from '@/views/Home/index.vue';
+import NoteView from '@/views/NoteView/index.vue';
 import { mount, createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 
@@ -12,9 +12,9 @@ const store = new Vuex.Store({
   },
 });
 
-describe('Home view', () => {
+describe('Note view', () => {
   it('1. Rendered success', async () => {
-    const wrapper = await mount(Home, { store, localVue });
+    const wrapper = await mount(NoteView, { store, localVue });
 
     expect(wrapper.html()).toMatchSnapshot();
   });

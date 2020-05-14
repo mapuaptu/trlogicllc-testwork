@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Note component 1. Rendered success 1`] = `
+<div>
+  <div>
+    <div data-test="note-title">
+
+    </div>
+    <div>
+      <div><svg width="24" height="24" viewbox="0 0 24 24">
+          <path fill="#fff"></path>
+        </svg></div>
+      <div><svg width="24" height="24" viewbox="0 0 24 24">
+          <path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" fill="#fff"></path>
+        </svg></div>
+    </div>
+  </div>
+  <div></div>
+</div>
+`;

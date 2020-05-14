@@ -1,7 +1,9 @@
 <template>
   <div :class="$style.note">
     <div :class="$style.title">
-      <div>{{ title }}</div>
+      <div data-test="note-title">
+        {{ title }}
+      </div>
 
       <div :class="$style.controls">
         <Icon
