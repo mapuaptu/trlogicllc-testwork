@@ -81,14 +81,14 @@ export default {
     },
   },
   created() {
-    // Create new instance of note for not mutate store directly
-
     const note = this.$store.state.notes.find(
       (item) => item.id === Number(this.$route.params.id),
     );
 
-    this.name = note.name;
-    this.id = note.id;
-    this.todos = [...note.todos];
+    if (note) {
+      this.name = note.name;
+      this.id = note.id;
+      this.todos = [...note.todos];
+    }
   },
 };
