@@ -70,7 +70,9 @@ export default {
         };
       }
 
-      this.note.todos.push({ name, complete: false });
+      // may be use uuid is better
+
+      this.note.todos.push({ name, complete: false, id: Date.now() });
 
       return { error: null };
     },

@@ -22,6 +22,10 @@ export default {
       return this.$emit('close');
     },
     onCreate() {
+      if (!this.todoName) {
+        return (this.message = 'Todo name requred');
+      }
+
       const { error } = this.onTodoSave(this.todoName);
 
       if (error) {

@@ -49,8 +49,8 @@
 
       <div :class="$style.todos">
         <div
-          v-for="(item, index) in note.todos"
-          :key="index"
+          v-for="item in note.todos"
+          :key="item.id"
         >
           {{ item }}
         </div>

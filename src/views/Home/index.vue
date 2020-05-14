@@ -27,7 +27,12 @@
         @delete="deleteNote(item)"
         @edit="editNote(item)"
       >
-        todo item will be here
+        <div
+          v-for="todo in item.todos"
+          :key="todo.id"
+        >
+          {{ todo }}
+        </div>
       </Note>
     </div>
   </div>
