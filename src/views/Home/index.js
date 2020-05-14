@@ -1,11 +1,12 @@
 import Button from '@/components/Button/index.vue';
 import Note from '@/components/Note/index.vue';
 import ModalCreateNote from '@/views/Modals/CreateNote/index.vue';
-import ModalDeleteNote from '@/views/Modals/DeleteNote/index.vue';
 import { mapState } from 'vuex';
+import deleteNote from '@/mixins/deleteNote';
 
 export default {
   name: 'HomeView',
+  mixins: [deleteNote],
   components: {
     Button,
     Note,
@@ -19,13 +20,6 @@ export default {
     },
     deleteAllNotes() {
       return this.$store.commit('DELETE_ALL_NOTES');
-    },
-    deleteNote({ id, name }) {
-      return this.$modal.show(
-        ModalDeleteNote,
-        { id, name },
-        { height: 'auto' },
-      );
     },
     editNote({ id }) {
       return this.$router.push({ name: 'note', params: { id } });

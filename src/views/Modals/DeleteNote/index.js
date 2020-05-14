@@ -21,8 +21,13 @@ export default {
     },
     onDelete() {
       this.$store.commit('DELETE_NOTE', { id: this.id });
+      this.$emit('close');
 
-      return this.$emit('close');
+      // Redirect to home page after delete note
+
+      if (this.$route.name !== 'home') {
+        this.$router.push({ name: 'home' });
+      }
     },
   },
 };

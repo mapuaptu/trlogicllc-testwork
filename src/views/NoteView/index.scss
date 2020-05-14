@@ -2,4 +2,29 @@
 
 .note {
   position: relative;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $color-java;
+    padding: 10px 20px;
+
+    .text {
+      font-size: 25px;
+      line-height: 25px;
+      color: $color-java;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+
+    > div:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
 }
