@@ -1,5 +1,7 @@
 <template>
-  <div :class="[$style.button, fill && $style['button--fill']]">
+  <div
+    :class="[$style.button, fill && $style['button--fill'], disabled && $style['button--disabled']]"
+  >
     <span>
       <slot />
     </span>

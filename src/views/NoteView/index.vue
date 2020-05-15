@@ -37,6 +37,13 @@
       </div>
     </div>
 
+    <div
+      v-if="message"
+      :class="$style.message"
+    >
+      {{ message }}
+    </div>
+
     <div :class="$style.content">
       <Button
         :fill="true"
@@ -67,6 +74,7 @@
 
       <Button
         :fill="true"
+        :disabled="!!message"
         @click.native="onSave"
       >
         Save

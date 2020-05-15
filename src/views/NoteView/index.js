@@ -6,6 +6,7 @@ import ModalCancelEdit from '@/views/Modals/CancelEdit/index.vue';
 import ModalCreateTodo from '@/views/Modals/CreateTodo/index.vue';
 import ModalEditTodo from '@/views/Modals/EditTodo/index.vue';
 import ClickOutside from 'vue-click-outside';
+import { mapState } from 'vuex';
 
 export default {
   name: 'NoteView',
@@ -24,7 +25,11 @@ export default {
       name: '',
       todos: [],
       editMode: false,
+      message: '',
     };
+  },
+  computed: {
+    ...mapState({ notes: 'notes' }),
   },
   methods: {
     editName() {
@@ -40,11 +45,17 @@ export default {
     onNameInput(event) {
       // If name of note is empty - remain first symbol
 
+      this.message = '';
+
       if (!event.target.value) {
         return;
       }
 
-      return (this.name = event.target.value);
+      this.name = event.target.value;
+
+      if (this.notes.find((item) => item.name === event.target.value)) {
+        return (this.message = 'Notes with this name aleady exist');
+      }
     },
     onCancel() {
       return this.$modal.show(ModalCancelEdit, {}, { height: 'auto' });
@@ -107,7 +118,7 @@ export default {
     },
   },
   created() {
-    const note = this.$store.state.notes.find(
+    const note = this.notes.find(
       (item) => item.id === Number(this.$route.params.id),
     );
 

@@ -25,7 +25,7 @@ export default {
       );
     },
     onNoteSave(name) {
-      if (this.$store.state.notes.find((item) => item.name === name)) {
+      if (this.notes.find((item) => item.name === name)) {
         return { error: { message: 'Note with this name already exist' } };
       }
 

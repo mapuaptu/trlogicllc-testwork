@@ -38,6 +38,12 @@
     }
   }
 
+  .message {
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-red-orange;
+  }
+
   .content {
     display: flex;
     flex-flow: column;

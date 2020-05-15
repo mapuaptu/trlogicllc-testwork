@@ -23,6 +23,7 @@ exports[`Note view 1. Rendered success 1`] = `
       </div>
     </div>
   </div>
+  <!---->
   <div>
     <div class=""><span>
       Add todo
