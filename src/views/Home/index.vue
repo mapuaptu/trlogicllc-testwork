@@ -28,12 +28,14 @@
         @edit="editNote(item)"
       >
         <template v-if="item.todos.length">
-          <div
-            v-for="todo in item.todos"
+          <Todo
+            v-for="todo in item.todos.slice(0, 3)"
             :key="todo.id"
+            :value="todo.complete"
+            :disabled="true"
           >
-            {{ todo }}
-          </div>
+            {{ todo.name }}
+          </Todo>
         </template>
 
         <template v-else>

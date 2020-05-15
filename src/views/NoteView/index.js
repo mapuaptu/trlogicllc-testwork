@@ -87,10 +87,12 @@ export default {
       (item) => item.id === Number(this.$route.params.id),
     );
 
+    // create new instance of todos object for immutability of original todos
+
     if (note) {
       this.name = note.name;
       this.id = note.id;
-      this.todos = [...note.todos];
+      this.todos = note.todos.map((item) => ({ ...item }));
     }
   },
 };

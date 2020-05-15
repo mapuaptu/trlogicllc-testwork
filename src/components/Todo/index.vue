@@ -4,7 +4,8 @@
       <div :class="$style.complete">
         <input
           type="checkbox"
-          :value="value"
+          :checked="value"
+          :disabled="disabled"
           @input="onInput"
         >
       </div>
@@ -14,7 +15,10 @@
       </div>
     </div>
 
-    <div :class="$style.controls">
+    <div
+      v-if="!disabled"
+      :class="$style.controls"
+    >
       <Icon icon="pencil-outline" />
       <Icon icon="delete-outline" />
     </div>

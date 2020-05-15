@@ -6,8 +6,7 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 5px;
-  padding: 10px;
-  min-width: 30px;
+  padding: 5px 10px;
   background-color: $color-java;
 
   &:not(:last-child) {
@@ -26,6 +25,10 @@
       width: 20px;
       height: 20px;
       cursor: pointer;
+    }
+
+    input[disabled] {
+      cursor: initial;
     }
   }
 

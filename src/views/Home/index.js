@@ -1,5 +1,6 @@
 import Button from '@/components/Button/index.vue';
 import Note from '@/components/Note/index.vue';
+import Todo from '@/components/Todo/index.vue';
 import ModalCreateNote from '@/views/Modals/CreateNote/index.vue';
 import { mapState } from 'vuex';
 import deleteNote from '@/mixins/deleteNote';
@@ -10,6 +11,7 @@ export default {
   components: {
     Button,
     Note,
+    Todo,
   },
   computed: {
     ...mapState({ notes: 'notes' }),

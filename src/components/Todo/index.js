@@ -10,6 +10,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     onInput({ target }) {
