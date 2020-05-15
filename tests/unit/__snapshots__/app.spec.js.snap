@@ -4,10 +4,17 @@ exports[`App component 1. Rendered success 1`] = `
 <div id="app">
   <modals-container-stub></modals-container-stub>
   <div class="container">
-    <div class="headline">
-      Note builder
+    <div class="top">
+      <div class="headline">
+        <router-link-stub to="[object Object]">
+          Note builder
+        </router-link-stub>
+      </div>
+      <router-view-stub></router-view-stub>
     </div>
-    <router-view-stub></router-view-stub>
+    <div class="bottom">
+      <footer-stub githublink="https://github.com/"></footer-stub>
+    </div>
   </div>
 </div>
 `;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component 1. Rendered success 1`] = `
+<div><a href="" target="_blank">
+    <div><svg width="24" height="24" viewbox="0 0 24 24">
+        <path fill="#14b6bd"></path>
+      </svg></div>
+
+  </a>
+  <div>
+    created by Alex Nikishkin
+  </div>
+</div>
+`;
