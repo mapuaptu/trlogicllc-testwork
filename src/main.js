@@ -1,7 +1,7 @@
 import './styles/common.scss';
 
 import Vue from 'vue';
-import App from './App.vue';
+import App from './views/App/index.vue';
 import router from './router';
 import store from './store';
 import VModal from 'vue-js-modal';

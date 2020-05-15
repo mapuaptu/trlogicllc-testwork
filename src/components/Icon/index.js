@@ -1,9 +1,15 @@
-import { mdiPlusOutline, mdiDeleteOutline, mdiPencilOutline } from '@mdi/js';
+import {
+  mdiPlusOutline,
+  mdiDeleteOutline,
+  mdiPencilOutline,
+  mdiGithub,
+} from '@mdi/js';
 
 const icons = {
   'plus-outline': mdiPlusOutline,
   'delete-outline': mdiDeleteOutline,
   'pencil-outline': mdiPencilOutline,
+  github: mdiGithub,
 };
 
 export default {

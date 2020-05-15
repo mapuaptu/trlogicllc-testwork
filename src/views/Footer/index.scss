@@ -1,0 +1,34 @@
+@import '@/styles/_variables.scss';
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  > *:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 12px;
+    color: $color-java;
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+
+  .copyright {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}

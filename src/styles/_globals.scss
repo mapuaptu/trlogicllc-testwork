@@ -17,6 +17,9 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
   margin-right: auto;
   margin-left: auto;
   padding: 20px 40px;
@@ -31,6 +34,11 @@ body {
   line-height: 40px;
   text-align: center;
   color: $color-java;
+
+  a {
+    text-decoration: none;
+    color: $color-java;
+  }
 }
 
 .vm--modal {
