@@ -13,7 +13,7 @@ exports[`App component 1. Rendered success 1`] = `
       <router-view-stub></router-view-stub>
     </div>
     <div class="bottom">
-      <footer-stub githublink="https://github.com/"></footer-stub>
+      <footer-stub githublink="https://github.com/mapuaptu/trlogicllc-testwork"></footer-stub>
     </div>
   </div>
 </div>

@@ -13,7 +13,7 @@
       </div>
 
       <div class="bottom">
-        <Footer github-link="https://github.com/" />
+        <Footer github-link="https://github.com/mapuaptu/trlogicllc-testwork" />
       </div>
     </div>
   </div>
