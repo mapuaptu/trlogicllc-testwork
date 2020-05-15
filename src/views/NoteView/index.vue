@@ -52,6 +52,8 @@
           v-for="item in todos"
           :key="item.id"
           v-model="item.complete"
+          @edit="editTodo(item)"
+          @delete="deleteTodo(item)"
         >
           {{ item.name }}
         </Todo>

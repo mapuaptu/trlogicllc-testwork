@@ -4,6 +4,7 @@ import Todo from '@/components/Todo/index.vue';
 import deleteNote from '@/mixins/deleteNote';
 import ModalCancelEdit from '@/views/Modals/CancelEdit/index.vue';
 import ModalCreateTodo from '@/views/Modals/CreateTodo/index.vue';
+import ModalEditTodo from '@/views/Modals/EditTodo/index.vue';
 import ClickOutside from 'vue-click-outside';
 
 export default {
@@ -80,6 +81,29 @@ export default {
       this.todos.push({ name, complete: false, id: Date.now() });
 
       return { error: null };
+    },
+    editTodo({ id, name }) {
+      this.$modal.show(
+        ModalEditTodo,
+        { onTodoEdit: this.onTodoEdit, name, id },
+        { height: 'auto' },
+      );
+    },
+    onTodoEdit({ id, name }) {
+      if (this.todos.find((item) => item.name === name)) {
+        return {
+          error: { message: 'Todo with same name already exist' },
+        };
+      }
+
+      this.todos.find((item) => item.id === id).name = name;
+
+      return {
+        error: null,
+      };
+    },
+    deleteTodo({ id }) {
+      return (this.todos = this.todos.filter((item) => item.id !== id));
     },
   },
   created() {

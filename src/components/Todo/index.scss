@@ -45,6 +45,15 @@
     display: flex;
     align-items: center;
 
+    > div {
+      transition: $transition;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
     > div:not(:last-child) {
       margin-right: 10px;
     }

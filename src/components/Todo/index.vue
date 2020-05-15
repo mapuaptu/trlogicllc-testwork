@@ -19,8 +19,15 @@
       v-if="!disabled"
       :class="$style.controls"
     >
-      <Icon icon="pencil-outline" />
-      <Icon icon="delete-outline" />
+      <Icon
+        icon="pencil-outline"
+        @click.native="$emit('edit')"
+      />
+
+      <Icon
+        icon="delete-outline"
+        @click.native="$emit('delete')"
+      />
     </div>
   </div>
 </template>
