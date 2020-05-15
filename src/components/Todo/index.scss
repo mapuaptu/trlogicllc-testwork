@@ -1,0 +1,53 @@
+@import '@/styles/_variables.scss';
+
+.todo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 30px;
+  background-color: $color-java;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+  }
+
+  .complete {
+    margin-right: 20px;
+
+    input {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    margin-right: 20px;
+    font-weight: 700;
+
+    &--complete {
+      text-decoration: line-through;
+    }
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+
+    > div:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &--complete {
+    opacity: 0.6;
+  }
+}

@@ -1,5 +1,6 @@
 import Button from '@/components/Button/index.vue';
 import Icon from '@/components/Icon/index.vue';
+import Todo from '@/components/Todo/index.vue';
 import deleteNote from '@/mixins/deleteNote';
 import ModalCancelEdit from '@/views/Modals/CancelEdit/index.vue';
 import ModalCreateTodo from '@/views/Modals/CreateTodo/index.vue';
@@ -14,6 +15,7 @@ export default {
   components: {
     Button,
     Icon,
+    Todo,
   },
   data() {
     return {

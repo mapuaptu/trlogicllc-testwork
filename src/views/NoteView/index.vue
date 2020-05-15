@@ -48,12 +48,13 @@
       </Button>
 
       <div :class="$style.todos">
-        <div
+        <Todo
           v-for="item in todos"
           :key="item.id"
+          v-model="item.complete"
         >
-          {{ item }}
-        </div>
+          {{ item.name }}
+        </Todo>
       </div>
     </div>
 
